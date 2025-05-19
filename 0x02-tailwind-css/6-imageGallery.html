@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="p-4 ">
+    <header class="bg-blue-500 text-white p-4 ">
+        <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4  mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+            <div class="p-4 bg-red-200 w-1/2" >Flexbox Item 1</div>
+            <div class="p-4 bg-red-400 w-1/2">Flexbox Item 2</div>
+        </section>-
+        <aside class="bg-green-200 p-4 ">Sidebar</aside>
+    </main>
+
+    <section>
+        <h2>Image Gallery </h2>
+        <div class=" grid grid-cols-1 lg:grid-cols-3 gap-3">
+            <img src="/pics/Career Paths in Salesforce.png" class="h-100 w-100 rounded object-cover" >
+            <img src="/pics/Community Values.png" class="h-100 w-100 rounded object-cover" >
+            <img src="/pics/conflict management.png" class="h-100 w-100 rounded object-cover" >
+            <img src="/pics/Cool Head, Warm Heart Framework.png" class="h-100 w-100 rounded object-cover" >
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4  mt-4">
+        <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+</body>
+</html>
